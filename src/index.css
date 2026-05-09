@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --surface: #f7f8f4;
+    --text-main: #121826;
+    --text-muted: #4f5b73;
+    --border-soft: #d9decb;
+    --accent: #7d9156;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  html,
+  body,
+  #root {
+    @apply min-h-screen;
+  }
+
+  body {
+    @apply m-0 bg-[var(--surface)] font-sans text-[var(--text-main)] antialiased;
+    background-image: radial-gradient(circle at 15% 15%, rgba(205, 218, 169, 0.35), transparent 34%),
+      radial-gradient(circle at 82% 5%, rgba(112, 124, 80, 0.2), transparent 22%),
+      linear-gradient(160deg, #f7f8f4 0%, #f4f3ef 45%, #f1eee7 100%);
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}
+
+@layer components {
+  .content-shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .glass-card {
+    @apply rounded-3xl border border-[var(--border-soft)] bg-white/70 shadow-soft backdrop-blur;
+  }
+
+  .section-title {
+    @apply font-display text-3xl font-semibold tracking-tight text-brand-800 sm:text-4xl;
+  }
+}

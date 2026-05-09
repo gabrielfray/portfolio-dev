@@ -50,3 +50,22 @@ Exemplo:
 ```ts
 import { Header } from '@/components/layout/Header'
 ```
+
+## Deploy na Vercel
+
+Este projeto ja esta preparado para deploy com `vercel.json`.
+
+### Opcao 1 - Dashboard Vercel
+
+1. Importe o repositorio na Vercel.
+2. Framework: `Vite`.
+3. Build command: `npm run build`.
+4. Output directory: `dist`.
+5. Deploy.
+
+### Opcao 2 - CLI
+
+```bash
+npx vercel
+npx vercel --prod
+```
